@@ -1,0 +1,243 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\usepackage{graphicx}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	major scientific achievements
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Babak Maboudi Afkham}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{}{\textit{Born on}}{22 March 1989} % Birthplace and date
+
+\NewEntry{Nationality}{}{Iranian}
+
+\NewEntry{email}{\href{mailto:babak.maboudi@epfl.ch}{babak.maboudi@epfl.ch}} % Email address
+
+%\NewEntry{website}{\href{http://www.johnsmith.com}{http://www.johnsmith.com}} % Personal website
+
+\NewEntry{phone}{(M) +41 78 627 46 97} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+%\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+%\Description{Gain fundamental experience in my area of interest and expertise.}\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	Interests
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Interests}\vspace{1em}
+
+\Description{\MarginText{Research}Fast Numerical Solutions for Parametric Partial Differential Equations, via Model Order Reduction. Developing Structure-Preserving Model-Reduction Techniques for Hyperbolic Problems.}
+
+\Description{\MarginText{Applied Mathematics}Model Order Reduction, Approximation Theory, Uncertainty Quantification, Inverse Problems, Machine Learning.}
+
+\Description{\MarginText{Pure Mathematics}Differential Geometry, Symplectic Geometry, Statistics.}
+
+\Description{\MarginText{Computer Science}Distributed and Parallel systems.}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+\NewEntry{2014-present}{Ecole Polytechnique F\'ed\'erale de Lausanne (EPFL), Lausanne-Switzerland}
+
+\Description{\MarginText{ \centering \includegraphics[height=0.075\textwidth]{./logos/epfl.png} }\textbf{Ph.D. in Computational Mathematics and Simulation Science} \newline
+Advisor: Prof. Jan S. Hesthaven \newline
+Research topic: Structure-Preserving Model-Reduction}
+
+\NewEntry{2017-2018}{Massachusetts Institute of Technology (MIT), Cambridge-United States of America}
+
+\Description{\MarginText{\centering \includegraphics[height=0.06\textwidth]{./logos/mit.png}}\textbf{Exchange Graduate Student in Aeronautics and Astronautics} \newline
+Advisor: Prof. Karen Willcox \newline
+Research topic: Energy-Preserving Model-Reduction for Euler's Equation}
+
+\NewEntry{2012-2014}{Royal Institute of Technology (KTH), Stockholm-Sweden}
+
+\Description{\MarginText{\centering \includegraphics[height=0.1\textwidth]{./logos/kth.png}}\textbf{M.Sc. in Scientific Computing} \newline
+Advisor: Prof. Anna-Karin Tornberg \newline
+Thesis topic: Simulation of elastic rods with intrinsic curvature and twist immersed in fluid}
+
+\NewEntry{2007-2012}{Sharif University of Technology (SUT), Tehran-Iran}
+
+\Description{\MarginText{\centering \includegraphics[height=0.1\textwidth]{./logos/sut.png}}\textbf{B.Sc. in Theoretical Mathematics} \newline
+Advisor: Prof. Mohammad Reza Razvan \newline
+Thesis topic: Learning Spectral Clustering}
+
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	Awards
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Awards}\vspace{1em}
+
+\Description{\MarginText{2017}The SNSF Doc.Mobility grant, 2017.}
+
+\Description{\MarginText{2014}The SMC (Stockholm Mathematics Center) award for excellent master thesis, 2014.}
+
+\Description{\MarginText{2013}KTH scholarship and tuition fee waiver, 2013.}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Publications
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Publications}\vspace{1em}
+
+\Description{\MarginText{2018}Babak Maboudi Afkham, Jan S. Hesthaven, "Structure-Preserving Model-Reduction of Dissipative Hamiltonian System", Journal of Scientific Computing (2018): 1-19}
+
+\Description{\MarginText{2017}Babak Maboudi Afkham, Jan S. Hesthaven, "Structure-Preserving Model-Reduction of Parametric Hamiltonian System", SIAM Journal on Scientific Computing 39.6 (2017): A2616-A2644}
+
+\vspace{1cm}
+
+\Description{\MarginText{2018}Babak Maboudi Afkham, Ashish Bhatt, Bernard Haasdonk, Jan S. Hesthaven, "Symplectic Model Reduction with a Weighted Inner Product", Submitted to SIAM Journal on Scientific Computing}
+
+\Description{\MarginText{2018}Babak Maboudi Afkham, Karen Willcox, Jan Hesthaven, "Energy Preserving Model Reduction of Fluid Flows" - Under Preparation }
+
+
+
+%------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	TEACHING & Supervision
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Teaching and Supervision}\vspace{1em}
+
+\Description{\MarginText{2014-2017}Principal Teacher Assistant of Analysis I and II: Holding 8 hours of lecture, Holding Exercise classes,Designing weekly exercise sheets}
+
+\Description{\MarginText{2017}Co-supervisor of the master thesis: "Energy preserving model reduction of fluid dynamics", Nicolo Ripamonti}
+
+\Description{\MarginText{2015}Supervisor of the semester project: "Hamiltonian formulation for non-conservative systems", Bozorgmehr Aminian}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TALKS AND SEMINARS
+%----------------------------------------------------------------------------------------
+
+
+
+\spacedlowsmallcaps{Invited Talks at International Conferences and Workshops} \vspace{1em}
+
+\Description{\MarginText{2018}MoRePaS 2018 Conference - Nantes, France \newline Keynote: "Model Order Reduction While Preserving a First Integral"}
+
+\Description{\MarginText{2016}MORCIP - Workshop on Model Order Reduction for Control \& Inverse Problems, EPFL \newline Invited Speaker: "Structure-Preserving Model Reduction of Hamiltonian Systems"}
+
+\Description{\MarginText{2016}ALOP - Workshop on Reduced Order Models in Optimization, The University of Trier \newline Invited Speaker: "Structure-Preserving Model Reduction of Hamiltonian Systems"}
+
+
+%----------------------------------------------------------------------------------------
+%	SUMMER SCHOOL & WORKSHOPS
+%----------------------------------------------------------------------------------------
+
+
+\spacedlowsmallcaps{Schools and Workshops} \vspace{1em}
+
+\Description{\MarginText{2016}Winter School on Uncertainty Quantification, University of Basel, Switzerland}
+
+\Description{\MarginText{2015}Bayesian Methods for Inverse Problems, University of Warwick, Uk.}
+
+\Description{\MarginText{2015}International School on Model Reduction for Dynamical Control Systems, Dubrovnik, Croatia.}
+
+\Description{\MarginText{2013}PDC Summer School: Introduction to High-Performance Computing, KTH, Stockholm, Sweden.}
+
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Languages}\vspace{1em}
+
+\Description{English (Professional working proficiency), Persian (Mother Tongue), French (Intermediate Proficiency)}
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	HOBBIES
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Hobbies}\vspace{1em}
+
+\Description{Rock-climbing, Mountaineering (Mount Kilimanjaro 5895m, Mount Damavand 5678m), Distance Running}
+
+
+%----------------------------------------------------------------------------------------
+%	References
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{References}\vspace{1em}
+
+\Description{Prof. Jan S. Hesthaven \newline Ecole Polytechnique F\'ed\'erale de Lausanne (EPFL)}
+
+\vspace{1em}
+
+\Description{Prof. Bernard Haasdonk \newline University of Stuttgart}
+
+\end{cv}
+
+\end{document}

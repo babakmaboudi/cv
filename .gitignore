@@ -1,0 +1,16 @@
+*.__*
+*.dvi
+*.aux
+*.bbl
+*.blg
+*.gz
+*.m~
+*.vtu
+*.aux
+*.log
+*.mat
+*.dat
+*.pvd
+*.pyc
+*.out
+*.thm
