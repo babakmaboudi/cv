@@ -105,9 +105,9 @@
 Advisor: Prof. Jan S. Hesthaven \newline
 Research topic: Structure-Preserving Model-Reduction}
 
-\Description{Abstract: Over the past decade, model order reduction has been successful in reducing the computational complexity of large scale and parametric elliptic and parabolic partial differential equations. Model order reduction of hyperbolic equation, however remains as a challenge. These problems are often derived from physical or geometrical symmetries, conservation laws and invariants. Such structures are lost over the course of conventional model reduction routines, e.g. proper orthogonal decomposition (POD), which often leads to unstable and qualitatively wrong solutions. In my thesis, we investigate an alternative model reduction approach to preserve the sympletic symmetry, an intrinsic structures of Hamiltonian systems. Unlike POD that constructs an orthonormal basis for the reduction space, this method constructs am orthogonal basis with respect to the pseudo inner product associated with Hamiltonian systems, known as the symplectic form. We show that the symplectic orthogonality provide a similar convergence rate as conventional orthogonal bases. Furthermore, we generalize the method to adopt to the norms and inner products most appropriate to the problem set up and discretizatoin. This allows the method to be applied on a wider range of discretization methods, especially the finite element methods. Moreover, we extend the method to consider dissipative systems: systems that are under the influence of dissipative forces but are Hamiltonian otherwise in the absence of such forces. 
+\Description{Model order reduction Has been successful in lowering the computational complexity of large-scale elliptic and parabolic partial differential equations (PDEs). However, Model order reduction of hyperbolic PDEs remains a challenge. Symmetries, conservation laws, and invariants, that are often at the core of such systems, are often destroyed over the course of model reduction. This result in a qualitatively wrong and often unstable solution. In my thesis, we develop a model reduction routine for Hamiltonian systems that preserve the symplectic symmetry, the intrinsic symmetry of the Hamiltonian system. This is possible by constructing a basis for the reduced space that is orthogonal with respect to the symplectic differential form. We show furthermore that such a basis retains conventional convergence rates. Moreover, we generalized the method to adapt to the norms and inner products most appropriate to the problem, e.g. the natural inner product obtained from a finite element method defined on an unstructured mesh. On the other hand, since most of the systems in engineering and science appear as a dissipative perturbation of a conservative system, we generalized the method to handle dissipative forces. \newline
 
-}
+On a different take, we also developed a model reduction routine that preserves the conservation of mass, conservation of momentum and conservation of energy of the Euler equation for ideal fluids and the Navier-Stokes equation.}
 
 \NewEntry{2017-2018}{Massachusetts Institute of Technology (MIT), Cambridge-United States of America}
 
@@ -115,17 +115,29 @@ Research topic: Structure-Preserving Model-Reduction}
 Advisor: Prof. Karen Willcox \newline
 Research topic: Energy-Preserving Model-Reduction for Euler's Equation}
 
+\Description{Conventional model order reduction routines are often unstable for hyperbolic fluid flows with strong advective terms, e.g. the Euler equation for ideal fluids. During my stay at MIT, I investigated a model reduction routine that preserves the conservation of energy and conservation of momentum for the fluid flows. This is obtained by first discretizing the system using discrete skew-symmetric differential operators. A model reduction routine that preserves the skew-symmetry of the discrete system can then preserve the mentioned invariants. Model reduction of the combustion equation is still an ongoing project.}
+
 \NewEntry{2012-2014}{Royal Institute of Technology (KTH), Stockholm-Sweden}
 
 \Description{\MarginText{\centering \includegraphics[height=0.1\textwidth]{./logos/kth.png}}\textbf{M.Sc. in Scientific Computing} \newline
 Advisor: Prof. Anna-Karin Tornberg \newline
 Thesis topic: Simulation of elastic rods with intrinsic curvature and twist immersed in fluid}
 
+\Description{The coupling of fluid flow with elastic micro-structures often posses computational challenges. When dealing with rod-like elastic objects immersed in a fluid, one way to overcome this computational complexity is to approximate three-dimensional rods with one-dimensional curves. However, one-dimensional curves result in singularities when fluid-structure forces are evaluated. In my thesis, we regularized the immersed one-dimensional rod by discretizing it into a set of interacting regularized point forces. This method removes the singularities while providing a faster computational evolution. Furthermore, we used Ewald summation formulas to achieve a higher speedup in computing the forces exerted by the rod. Our new Ewald summation formulas, allows fast numerical evaluation of the torques exerted by the elastic structure.}
+
+\Description{Among Courses: Finite Element Method, Conservation Laws, Computational Fluid Dynamics, Mathematical Modeling, Parallel Programming and Advanced Parallel Programming for Large Scale Problems, High Performance Computing, Advanced programming for Scientific Computing, Integral Theory: Measure Theory and Functional Analysis}
+
 \NewEntry{2007-2012}{Sharif University of Technology (SUT), Tehran-Iran}
 
 \Description{\MarginText{\centering \includegraphics[height=0.1\textwidth]{./logos/sut.png}}\textbf{B.Sc. in Theoretical Mathematics} \newline
 Advisor: Prof. Mohammad Reza Razvan \newline
 Thesis topic: Learning Spectral Clustering}
+
+\Description{In my thesis, we investigated a machine learning approach for unsupervised learning of a weighted graph using graph cuts.}
+
+\Description{Among Courses: Group Theory, Ring Theory, Number Theory, Real Analysis, Complex Analysis, Regression Theory, Probability Theory, Statistics, Data Structures.}
+
+
 
 %------------------------------------------------
 
@@ -142,8 +154,6 @@ Thesis topic: Learning Spectral Clustering}
 
 \Description{\MarginText{2013}KTH scholarship and tuition fee waiver, 2013.}
 
-\newpage
-
 %----------------------------------------------------------------------------------------
 %	Publications
 %----------------------------------------------------------------------------------------
@@ -152,19 +162,33 @@ Thesis topic: Learning Spectral Clustering}
 
 \Description{\MarginText{2018}Babak Maboudi Afkham, Jan S. Hesthaven, "Structure-Preserving Model-Reduction of Dissipative Hamiltonian System", Journal of Scientific Computing (2018): 1-19}
 
+\Description{Abstract: Reduced basis methods are popular for approximately solving large and complex systems of differential equations. However, conventional reduced basis methods do not generally preserve conservation laws and symmetries of the full order model. Here, we present an approach for reduced model construction, that preserves the symplectic symmetry of dissipative Hamiltonian systems. The method constructs a closed reduced Hamiltonian system by coupling the full model with a canonical heat bath. This allows the reduced system to be integrated with a symplectic integrator, resulting in a correct dissipation of energy, preservation of the total energy and, ultimately, in the stability of the solution. Accuracy and stability of the method are illustrated through the numerical simulation of the dissipative wave equation and a port-Hamiltonian model of an electric circuit.}
+
 \Description{\MarginText{2017}Babak Maboudi Afkham, Jan S. Hesthaven, "Structure-Preserving Model-Reduction of Parametric Hamiltonian System", SIAM Journal on Scientific Computing 39.6 (2017): A2616-A2644}
 
+\Description{Abstract: While reduced-order models (ROMs) have been popular for efficiently solving large systems of differential equations, the stability of reduced models over long-time integration is of present challenges. We present a greedy approach for ROM generation of parametric Hamiltonian systems that captures the symplectic structure of Hamiltonian systems to ensure stability of the reduced model. Through the greedy selection of basis vectors, two new vectors are added at each iteration to the linear vector space to increase the accuracy of the reduced basis. We use the error in the Hamiltonian due to model reduction as an error indicator to search the parameter space and identify the next best basis vectors. Under natural assumptions on the set of all solutions of the Hamiltonian system under variation of the parameters, we show that the greedy algorithm converges with exponential rate. Moreover, we demonstrate that combining the greedy basis with the discrete empirical interpolation method also preserves the symplectic structure. This enables the reduction of the computational cost for nonlinear Hamiltonian systems. The efficiency, accuracy, and stability of this model reduction technique is illustrated through simulations of the parametric wave equation and the parametric Schrodinger equation.}
+
+\noindent\rule{12cm}{0.4pt}
 \vspace{1cm}
 
 \Description{\MarginText{2018}Babak Maboudi Afkham, Ashish Bhatt, Bernard Haasdonk, Jan S. Hesthaven, "Symplectic Model Reduction with a Weighted Inner Product", Submitted to SIAM Journal on Scientific Computing}
 
+\Description{Abstract: In the recent years, considerable attention has been paid to preserving structures and invariants in reduced basis methods, in order to enhance the stability and robustness of the reduced system. In the context of Hamiltonian systems, symplectic model reduction seeks to construct a reduced system that preserves the symplectic symmetry of Hamiltonian systems. However, symplectic methods are based on the standard Euclidean inner products and are not suitable for problems equipped with a more general inner product. In this paper, we generalize symplectic model reduction to allow for the norms and inner products that are most appropriate to the problem while preserving the symplectic symmetry of the Hamiltonian systems. To construct a reduced basis and accelerate the evaluation of nonlinear terms, a greedy generation of a symplectic basis is proposed. Furthermore, it is shown that the greedy approach yields a norm-bounded reduced basis. The accuracy and the stability of this model reduction technique are illustrated through the development of reduced models for a vibrating elastic beam and the sine-Gordon equation.}
+
 \Description{\MarginText{2018}Babak Maboudi Afkham, Karen Willcox, Jan Hesthaven, "Energy Preserving Model Reduction of Fluid Flows" - Under Preparation }
 
-
+\newpage
 
 %------------------------------------------------
 
 
+%----------------------------------------------------------------------------------------
+%	PROGRAMMING SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Programming Skills}\vspace{1em}
+
+\Description{C/C++: LAPACK, MPI, OpenMP, CUDA. Python: FEniCS. MATLAB. ParaView.}
 
 %----------------------------------------------------------------------------------------
 %	TEACHING & Supervision
@@ -220,7 +244,6 @@ Thesis topic: Learning Spectral Clustering}
 
 \Description{English (Professional working proficiency), Persian (Mother Tongue), French (Intermediate Proficiency)}
 
-\newpage
 %----------------------------------------------------------------------------------------
 %	HOBBIES
 %----------------------------------------------------------------------------------------
